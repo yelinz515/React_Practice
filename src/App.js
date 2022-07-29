@@ -1,25 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
 
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  // const user = {
+  //   firstName: "React",
+  //   lastName: "JSX Activity"
+  // };
+
+  const naming = ["React" , "React-Dom", "HTML", "CSS", "JS", "TypeScript", "VanilaJS"]
+  const rand = (length) => {
+    return parseInt(Math.random() * length)
+  }
+
+  // function formatName(user) {
+  //   return user.firstName + " " + user.lastName;
+  // }
+
+  // JSX 없이 활용한 React
+  // return React.createElement("h1", null, `Hello, ${formatName(user)}!`);
+
+    // JSX 를 활용한 React
+  return <h1>Hello, {naming[rand(naming.length)]}!</h1>;
 }
 
 export default App;
